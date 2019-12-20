@@ -5,6 +5,8 @@ import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 
+import java.time.LocalDate;
+
 import static com.codeborne.selenide.Selenide.*;
 
 public class GoogleCalendar {
@@ -16,7 +18,7 @@ public class GoogleCalendar {
     }
 
     @Step("Установить дату")
-    public SelenideElement setDate(String date) {
+    public SelenideElement setDate(LocalDate date) {
         String s = String.format("//calendar-day[@data-day = '%s']", date);
         return $x(s);
     }

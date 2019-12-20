@@ -10,8 +10,11 @@ public class StartGoogleTripPage {
     }
 
     @Step("Поиск рейса или отеля: \"{s}\"")
-    public ResultPage search(String s) {
+    public void search(String s) {
         $x("//input[@placeholder = 'Искать рейсы и отели']").val(s).pressEnter();
+    }
+
+    public ResultPage newPage() {
         return new ResultPage();
     }
 }

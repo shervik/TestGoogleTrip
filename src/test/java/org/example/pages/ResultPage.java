@@ -21,7 +21,7 @@ public class ResultPage {
 
     @Step("Выбор планирования поездок")
     public GooglePlan googlePlan() {
-        googlePlan.pressEnter();
+        googlePlan.click();
         return new GooglePlan();
     }
 }
